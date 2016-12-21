@@ -30,4 +30,6 @@ class CandidateDetailViewController: UIViewController {
     func handleUnmatch() {
     
     }
+    
+    
 }

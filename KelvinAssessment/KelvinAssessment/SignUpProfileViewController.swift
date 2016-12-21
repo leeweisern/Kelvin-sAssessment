@@ -36,10 +36,12 @@ class SignUpProfileViewController: UIViewController {
                 print(error!)
                 return
             } else {
-                let userData = ["email": self.emailTextField.text!,
-                                "name": self.nameTextField.text!,
+                let userData = ["name": self.nameTextField.text!,
                                 "age": self.ageTextField.text!,
-                                "gender": self.
+                                "gender": self.genderTextField.text!,
+                                "email": self.emailTextField.text!,
+                                "password": self.passwordTextField.text!,
+                                "description": self.descriptionTextField.text!,
                                 "profileImage": "default"] as [String : Any]
                     
                 self.loginUser(email: self.emailTextField.text!, password: self.passwordTextField.text!)
@@ -53,6 +55,7 @@ class SignUpProfileViewController: UIViewController {
 
     
     var usersFRDBRef : FIRDatabaseReference = FIRDatabase.database().reference(withPath: "users")
+    
     
     
     override func viewDidLoad() {
