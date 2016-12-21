@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        FIRApp.configure()
+        
         return true
     }
 
@@ -43,4 +46,75 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
+
+extension AppDelegate {
+    func observeAuthNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleSignedInNotification(_:)), name: Notification.Name(rawValue: "SignedInNotification") , object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleSignedOutNotification(_:)), name: Notification.Name(rawValue: "SignedOutNotification") , object: nil)
+    }
+    
+    func observeTransitionNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleUserTransitionToRecycleGeneralViewController), name: Notification.Name(rawValue: "UserTransitionToRecycleGeneral"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleUserTransitionToProfileViewController), name: Notification.Name(rawValue: "UserTransitionToProfile"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleUserTransitionToGuideViewController), name: Notification.Name(rawValue: "UserTransitionToGuide"), object: nil)
+        
+    }
+    
+    func handleSignedOutNotification(_ notification: Notification) {
+        window!.rootViewController = instantiateLoginViewController()
+    }
+    
+    func handleSignedInNotification(_ notification: Notification) {
+        window!.rootViewController = instantiateMenuTabBarController()
+    }
+    
+    func handleUserTransitionToRecycleGeneralViewController(_ notification: Notification) {
+        window!.rootViewController?.present(instantiateKelvinViewController(), animated: true, completion: nil)
+    }
+    
+    func handleUserTransitionToProfileViewController(_ notification: Notification) {
+        window!.rootViewController?.present(instantiateUserViewController(), animated: true, completion: nil)
+    }
+    
+    func handleUserTransitionToGuideViewController(_ notification: Notification) {
+        window!.rootViewController?.present(instatiateGuideViewController(), animated: true, completion: nil)
+    }
+}
+
+extension AppDelegate {
+    func instantiateMenuTabBarController() -> MenuTabBarController {
+        let mainStoryboard = UIStoryboard.init(name: "Main", bundle: Bundle.init(identifier: "Main"))
+        let menuTabBarController = mainStoryboard.instantiateViewController(withIdentifier: "Menu Tab Bar")
+        return menuTabBarController as! MenuTabBarController
+    }
+    
+    func instantiateLoginViewController() -> LoginViewController {
+        let loginViewController = LoginViewController()
+        return loginViewController
+    }
+    
+    func instantiateDriverViewController() -> DriverViewController {
+        let driverStoryboard = UIStoryboard.init(name: "DriverStoryboard", bundle: Bundle.init(identifier: "DriverStoryboard"))
+        let driverViewController = driverStoryboard.instantiateViewController(withIdentifier: "Driver")
+        return driverViewController as! DriverViewController
+    }
+    
+    func instantiateKelvinViewController() -> RecycleGeneralViewController {
+        let kelvinViewController = RecycleGeneralViewController()
+        return kelvinViewController
+    }
+    
+    func instantiateUserViewController() -> ProfileViewController {
+        let userStoryboard = UIStoryboard.init(name: "Profile", bundle: Bundle.init(identifier: "Profile"))
+        let userViewController = userStoryboard.instantiateViewController(withIdentifier: "Profile")
+        return userViewController as! ProfileViewController
+    }
+    
+    func instatiateGuideViewController() -> UINavigationController {
+        let guideViewController = GuideViewController()
+        let navController = UINavigationController(rootViewController: guideViewController)
+        return navController
+}
+
 

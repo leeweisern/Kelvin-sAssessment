@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36338F52EB42901381CD8074 /* Pods_KelvinAssessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7C5F27EE8DB9AE04E5415B /* Pods_KelvinAssessment.framework */; };
 		A13B5DB41E0A1C820054F7EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B5DB31E0A1C820054F7EE /* AppDelegate.swift */; };
-		A13B5DB61E0A1C820054F7EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B5DB51E0A1C820054F7EE /* ViewController.swift */; };
 		A13B5DB91E0A1C820054F7EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13B5DB71E0A1C820054F7EE /* Main.storyboard */; };
 		A13B5DBB1E0A1C820054F7EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13B5DBA1E0A1C820054F7EE /* Assets.xcassets */; };
 		A13B5DBE1E0A1C820054F7EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13B5DBC1E0A1C820054F7EE /* LaunchScreen.storyboard */; };
+		A13B5DC61E0A1E880054F7EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A13B5DC51E0A1E880054F7EE /* GoogleService-Info.plist */; };
+		A13B5DC91E0A267D0054F7EE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B5DC81E0A267D0054F7EE /* LoginViewController.swift */; };
+		A13B5DCD1E0A28C20054F7EE /* SignUpProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B5DCC1E0A28C20054F7EE /* SignUpProfileViewController.swift */; };
+		A13B5DCF1E0A28F80054F7EE /* MatchedProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B5DCE1E0A28F80054F7EE /* MatchedProfilesViewController.swift */; };
+		A13B5DD11E0A29190054F7EE /* MatchCandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B5DD01E0A29190054F7EE /* MatchCandidateViewController.swift */; };
+		A13B5DD31E0A29300054F7EE /* CandidateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B5DD21E0A29300054F7EE /* CandidateDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F7C5F27EE8DB9AE04E5415B /* Pods_KelvinAssessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KelvinAssessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D7FBA811D9F86CE7EE9B307 /* Pods-KelvinAssessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KelvinAssessment.release.xcconfig"; path = "Pods/Target Support Files/Pods-KelvinAssessment/Pods-KelvinAssessment.release.xcconfig"; sourceTree = "<group>"; };
 		A13B5DB01E0A1C820054F7EE /* KelvinAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KelvinAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13B5DB31E0A1C820054F7EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A13B5DB51E0A1C820054F7EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A13B5DB81E0A1C820054F7EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A13B5DBA1E0A1C820054F7EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A13B5DBD1E0A1C820054F7EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A13B5DBF1E0A1C820054F7EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A13B5DC51E0A1E880054F7EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A13B5DC81E0A267D0054F7EE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A13B5DCC1E0A28C20054F7EE /* SignUpProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpProfileViewController.swift; sourceTree = "<group>"; };
+		A13B5DCE1E0A28F80054F7EE /* MatchedProfilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchedProfilesViewController.swift; sourceTree = "<group>"; };
+		A13B5DD01E0A29190054F7EE /* MatchCandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchCandidateViewController.swift; sourceTree = "<group>"; };
+		A13B5DD21E0A29300054F7EE /* CandidateDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateDetailViewController.swift; sourceTree = "<group>"; };
+		F6A9C488D505112A739807B6 /* Pods-KelvinAssessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KelvinAssessment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KelvinAssessment/Pods-KelvinAssessment.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36338F52EB42901381CD8074 /* Pods_KelvinAssessment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C4648A7CF873D3AFBF2C850 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6A9C488D505112A739807B6 /* Pods-KelvinAssessment.debug.xcconfig */,
+				8D7FBA811D9F86CE7EE9B307 /* Pods-KelvinAssessment.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A13B5DA71E0A1C810054F7EE = {
 			isa = PBXGroup;
 			children = (
 				A13B5DB21E0A1C820054F7EE /* KelvinAssessment */,
 				A13B5DB11E0A1C820054F7EE /* Products */,
+				1C4648A7CF873D3AFBF2C850 /* Pods */,
+				E8DDED207A1064FC93599268 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +80,43 @@
 		A13B5DB21E0A1C820054F7EE /* KelvinAssessment */ = {
 			isa = PBXGroup;
 			children = (
+				A13B5DD41E0A31FA0054F7EE /* Models */,
+				A13B5DC71E0A1F910054F7EE /* Controllers */,
 				A13B5DB31E0A1C820054F7EE /* AppDelegate.swift */,
-				A13B5DB51E0A1C820054F7EE /* ViewController.swift */,
 				A13B5DB71E0A1C820054F7EE /* Main.storyboard */,
 				A13B5DBA1E0A1C820054F7EE /* Assets.xcassets */,
 				A13B5DBC1E0A1C820054F7EE /* LaunchScreen.storyboard */,
 				A13B5DBF1E0A1C820054F7EE /* Info.plist */,
+				A13B5DC51E0A1E880054F7EE /* GoogleService-Info.plist */,
 			);
 			path = KelvinAssessment;
+			sourceTree = "<group>";
+		};
+		A13B5DC71E0A1F910054F7EE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A13B5DC81E0A267D0054F7EE /* LoginViewController.swift */,
+				A13B5DCC1E0A28C20054F7EE /* SignUpProfileViewController.swift */,
+				A13B5DCE1E0A28F80054F7EE /* MatchedProfilesViewController.swift */,
+				A13B5DD01E0A29190054F7EE /* MatchCandidateViewController.swift */,
+				A13B5DD21E0A29300054F7EE /* CandidateDetailViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A13B5DD41E0A31FA0054F7EE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		E8DDED207A1064FC93599268 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F7C5F27EE8DB9AE04E5415B /* Pods_KelvinAssessment.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +126,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A13B5DC21E0A1C820054F7EE /* Build configuration list for PBXNativeTarget "KelvinAssessment" */;
 			buildPhases = (
+				244B34B237742692716CE5B3 /* [CP] Check Pods Manifest.lock */,
 				A13B5DAC1E0A1C820054F7EE /* Sources */,
 				A13B5DAD1E0A1C820054F7EE /* Frameworks */,
 				A13B5DAE1E0A1C820054F7EE /* Resources */,
+				ACEF8AD39ADD566AFC53C095 /* [CP] Embed Pods Frameworks */,
+				AECBD46093005F9D90C2B23D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A13B5DBE1E0A1C820054F7EE /* LaunchScreen.storyboard in Resources */,
+				A13B5DC61E0A1E880054F7EE /* GoogleService-Info.plist in Resources */,
 				A13B5DBB1E0A1C820054F7EE /* Assets.xcassets in Resources */,
 				A13B5DB91E0A1C820054F7EE /* Main.storyboard in Resources */,
 			);
@@ -131,12 +190,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		244B34B237742692716CE5B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ACEF8AD39ADD566AFC53C095 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KelvinAssessment/Pods-KelvinAssessment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AECBD46093005F9D90C2B23D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KelvinAssessment/Pods-KelvinAssessment-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A13B5DAC1E0A1C820054F7EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A13B5DB61E0A1C820054F7EE /* ViewController.swift in Sources */,
+				A13B5DD11E0A29190054F7EE /* MatchCandidateViewController.swift in Sources */,
+				A13B5DC91E0A267D0054F7EE /* LoginViewController.swift in Sources */,
+				A13B5DCF1E0A28F80054F7EE /* MatchedProfilesViewController.swift in Sources */,
+				A13B5DCD1E0A28C20054F7EE /* SignUpProfileViewController.swift in Sources */,
+				A13B5DD31E0A29300054F7EE /* CandidateDetailViewController.swift in Sources */,
 				A13B5DB41E0A1C820054F7EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +369,7 @@
 		};
 		A13B5DC31E0A1C820054F7EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6A9C488D505112A739807B6 /* Pods-KelvinAssessment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KelvinAssessment/Info.plist;
@@ -270,6 +382,7 @@
 		};
 		A13B5DC41E0A1C820054F7EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D7FBA811D9F86CE7EE9B307 /* Pods-KelvinAssessment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KelvinAssessment/Info.plist;
@@ -299,6 +412,7 @@
 				A13B5DC41E0A1C820054F7EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

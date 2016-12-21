@@ -1,0 +1,6 @@
+framework module Pods_KelvinAssessment {
+  umbrella header "Pods-KelvinAssessment-umbrella.h"
+
+  export *
+  module * { export * }
+}
