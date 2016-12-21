@@ -18,6 +18,7 @@
 		A13B5DCF1E0A28F80054F7EE /* MatchedProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B5DCE1E0A28F80054F7EE /* MatchedProfilesViewController.swift */; };
 		A13B5DD11E0A29190054F7EE /* MatchCandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B5DD01E0A29190054F7EE /* MatchCandidateViewController.swift */; };
 		A13B5DD31E0A29300054F7EE /* CandidateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B5DD21E0A29300054F7EE /* CandidateDetailViewController.swift */; };
+		A13B5DD71E0A358B0054F7EE /* MatchedProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B5DD61E0A358B0054F7EE /* MatchedProfileTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		A13B5DCE1E0A28F80054F7EE /* MatchedProfilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchedProfilesViewController.swift; sourceTree = "<group>"; };
 		A13B5DD01E0A29190054F7EE /* MatchCandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchCandidateViewController.swift; sourceTree = "<group>"; };
 		A13B5DD21E0A29300054F7EE /* CandidateDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateDetailViewController.swift; sourceTree = "<group>"; };
+		A13B5DD61E0A358B0054F7EE /* MatchedProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchedProfileTableViewCell.swift; sourceTree = "<group>"; };
 		F6A9C488D505112A739807B6 /* Pods-KelvinAssessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KelvinAssessment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KelvinAssessment/Pods-KelvinAssessment.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 		A13B5DB21E0A1C820054F7EE /* KelvinAssessment */ = {
 			isa = PBXGroup;
 			children = (
+				A13B5DD51E0A34680054F7EE /* Helpers */,
 				A13B5DD41E0A31FA0054F7EE /* Models */,
 				A13B5DC71E0A1F910054F7EE /* Controllers */,
 				A13B5DB31E0A1C820054F7EE /* AppDelegate.swift */,
@@ -109,6 +112,14 @@
 			children = (
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		A13B5DD51E0A34680054F7EE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A13B5DD61E0A358B0054F7EE /* MatchedProfileTableViewCell.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		E8DDED207A1064FC93599268 /* Frameworks */ = {
@@ -248,6 +259,7 @@
 				A13B5DCF1E0A28F80054F7EE /* MatchedProfilesViewController.swift in Sources */,
 				A13B5DCD1E0A28C20054F7EE /* SignUpProfileViewController.swift in Sources */,
 				A13B5DD31E0A29300054F7EE /* CandidateDetailViewController.swift in Sources */,
+				A13B5DD71E0A358B0054F7EE /* MatchedProfileTableViewCell.swift in Sources */,
 				A13B5DB41E0A1C820054F7EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
