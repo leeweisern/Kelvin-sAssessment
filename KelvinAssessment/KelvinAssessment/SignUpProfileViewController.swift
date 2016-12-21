@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class SignUpProfileViewController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
@@ -29,11 +31,28 @@ class SignUpProfileViewController: UIViewController {
     }()
     
     func handleCreateUpdateAccount() {
-        
-        
-        
+        FIRAuth.auth()?.createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            if (error != nil) {
+                print(error!)
+                return
+            } else {
+                let userData = ["email": self.emailTextField.text!,
+                                "name": self.nameTextField.text!,
+                                "age": self.ageTextField.text!,
+                                "gender": self.
+                                "profileImage": "default"] as [String : Any]
+                    
+                self.loginUser(email: self.emailTextField.text!, password: self.passwordTextField.text!)
+                    
+                let userUID : String? = FIRAuth.auth()?.currentUser?.uid
+                let childUpdate = ["\(userUID!)/": userData]
+                self.usersFRDBRef.updateChildValues(childUpdate)
+            }
+        }
     }
 
+    
+    var usersFRDBRef : FIRDatabaseReference = FIRDatabase.database().reference(withPath: "users")
     
     
     override func viewDidLoad() {

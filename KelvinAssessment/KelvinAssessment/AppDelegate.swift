@@ -19,6 +19,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FIRApp.configure()
         
+        if FIRAuth.auth()?.currentUser != nil {
+            
+            window!.rootViewController = instantiateMatchCandidateViewController()
+            FIRAuth.auth()?.addStateDidChangeListener { auth, user in
+                if user != nil {
+                    return
+                } else {
+                    let signedOutAlert = UIAlertController.init(title: "Signed Out", message: "You have been signed out from Tinder. Please login again.", preferredStyle: .alert)
+                    let okAlertAction = UIAlertAction.init(title: "OK", style: .default, handler: {(alert: UIAlertAction!) in
+                        let signedOutNotification = Notification(name: Notification.Name(rawValue: "SignedOutNotification"), object: nil, userInfo: nil)
+                        NotificationCenter.default.post(signedOutNotification)
+                    })
+                    signedOutAlert.addAction(okAlertAction)
+                    self.window!.rootViewController?.present(signedOutAlert, animated: true, completion: nil)
+                }
+            }
+            
+        } else {
+            window!.rootViewController = instantiateLoginViewController()
+        }
+
+        observeAuthNotification()
+        window!.makeKeyAndVisible()
+        
         return true
     }
 
@@ -54,67 +78,41 @@ extension AppDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(handleSignedOutNotification(_:)), name: Notification.Name(rawValue: "SignedOutNotification") , object: nil)
     }
     
-    func observeTransitionNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(handleUserTransitionToRecycleGeneralViewController), name: Notification.Name(rawValue: "UserTransitionToRecycleGeneral"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(handleUserTransitionToProfileViewController), name: Notification.Name(rawValue: "UserTransitionToProfile"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(handleUserTransitionToGuideViewController), name: Notification.Name(rawValue: "UserTransitionToGuide"), object: nil)
-        
-    }
+//    func observeTransitionNotification() {
+//        NotificationCenter.default.addObserver(self, selector: #selector(handleUserTransitionToRecycleGeneralViewController), name: Notification.Name(rawValue: "UserTransitionToRecycleGeneral"), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(handleUserTransitionToProfileViewController), name: Notification.Name(rawValue: "UserTransitionToProfile"), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(handleUserTransitionToGuideViewController), name: Notification.Name(rawValue: "UserTransitionToGuide"), object: nil)
+//        
+//    }
     
     func handleSignedOutNotification(_ notification: Notification) {
         window!.rootViewController = instantiateLoginViewController()
     }
     
     func handleSignedInNotification(_ notification: Notification) {
-        window!.rootViewController = instantiateMenuTabBarController()
+        window!.rootViewController = instantiateMatchCandidateViewController()
     }
     
-    func handleUserTransitionToRecycleGeneralViewController(_ notification: Notification) {
-        window!.rootViewController?.present(instantiateKelvinViewController(), animated: true, completion: nil)
-    }
+
+
     
-    func handleUserTransitionToProfileViewController(_ notification: Notification) {
-        window!.rootViewController?.present(instantiateUserViewController(), animated: true, completion: nil)
-    }
-    
-    func handleUserTransitionToGuideViewController(_ notification: Notification) {
-        window!.rootViewController?.present(instatiateGuideViewController(), animated: true, completion: nil)
-    }
+
 }
 
 extension AppDelegate {
-    func instantiateMenuTabBarController() -> MenuTabBarController {
-        let mainStoryboard = UIStoryboard.init(name: "Main", bundle: Bundle.init(identifier: "Main"))
-        let menuTabBarController = mainStoryboard.instantiateViewController(withIdentifier: "Menu Tab Bar")
-        return menuTabBarController as! MenuTabBarController
-    }
     
     func instantiateLoginViewController() -> LoginViewController {
         let loginViewController = LoginViewController()
         return loginViewController
     }
     
-    func instantiateDriverViewController() -> DriverViewController {
-        let driverStoryboard = UIStoryboard.init(name: "DriverStoryboard", bundle: Bundle.init(identifier: "DriverStoryboard"))
-        let driverViewController = driverStoryboard.instantiateViewController(withIdentifier: "Driver")
-        return driverViewController as! DriverViewController
-    }
-    
-    func instantiateKelvinViewController() -> RecycleGeneralViewController {
-        let kelvinViewController = RecycleGeneralViewController()
-        return kelvinViewController
-    }
-    
-    func instantiateUserViewController() -> ProfileViewController {
-        let userStoryboard = UIStoryboard.init(name: "Profile", bundle: Bundle.init(identifier: "Profile"))
-        let userViewController = userStoryboard.instantiateViewController(withIdentifier: "Profile")
-        return userViewController as! ProfileViewController
-    }
-    
-    func instatiateGuideViewController() -> UINavigationController {
-        let guideViewController = GuideViewController()
-        let navController = UINavigationController(rootViewController: guideViewController)
+    func instantiateMatchCandidateViewController() -> UINavigationController {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.init(identifier: "Main"))
+        let matchCandidateViewController = storyboard.instantiateViewController(withIdentifier: "MatchCandidateViewController")
+        let navController = UINavigationController(rootViewController: matchCandidateViewController)
         return navController
+    }
+    
 }
 
 

@@ -16,18 +16,23 @@ class MatchCandidateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Profile", style: .done, target: self, action: #selector(handleProfile))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Profile", style: .plain, target: self, action: #selector(handleProfile))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Matches", style: .plain, target: self, action: #selector(handleMatches))
     }
 
     func handleProfile() {
-        dismiss(animated: true, completion: nil)
+        let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.init(identifier: "Main"))
+        let signUpProfileViewController = storyboard.instantiateViewController(withIdentifier: "SignUpProfileViewController")
+        let navController = UINavigationController(rootViewController: signUpProfileViewController)
+        self.present(navController, animated: true, completion: nil)
     }
     
     func handleMatches() {
-//        let nextController = AlternativeAddressViewController()
-//        let navController = UINavigationController(rootViewController: nextController)
-//        self.present(navController, animated: true, completion: nil)
+        let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.init(identifier: "Main"))
+        let matchedProfilesViewController = storyboard.instantiateViewController(withIdentifier: "MatchedProfilesViewController")
+        let navController = UINavigationController(rootViewController: matchedProfilesViewController)
+        self.present(navController, animated: true, completion: nil)
+        
     }
     
 

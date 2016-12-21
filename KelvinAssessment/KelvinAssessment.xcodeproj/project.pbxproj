@@ -19,6 +19,7 @@
 		A13B5DD11E0A29190054F7EE /* MatchCandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B5DD01E0A29190054F7EE /* MatchCandidateViewController.swift */; };
 		A13B5DD31E0A29300054F7EE /* CandidateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B5DD21E0A29300054F7EE /* CandidateDetailViewController.swift */; };
 		A13B5DD71E0A358B0054F7EE /* MatchedProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B5DD61E0A358B0054F7EE /* MatchedProfileTableViewCell.swift */; };
+		A13B5DD91E0A5EFD0054F7EE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B5DD81E0A5EFD0054F7EE /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		A13B5DD01E0A29190054F7EE /* MatchCandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchCandidateViewController.swift; sourceTree = "<group>"; };
 		A13B5DD21E0A29300054F7EE /* CandidateDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateDetailViewController.swift; sourceTree = "<group>"; };
 		A13B5DD61E0A358B0054F7EE /* MatchedProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchedProfileTableViewCell.swift; sourceTree = "<group>"; };
+		A13B5DD81E0A5EFD0054F7EE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F6A9C488D505112A739807B6 /* Pods-KelvinAssessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KelvinAssessment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KelvinAssessment/Pods-KelvinAssessment.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				A13B5DD61E0A358B0054F7EE /* MatchedProfileTableViewCell.swift */,
+				A13B5DD81E0A5EFD0054F7EE /* Extensions.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				A13B5DD11E0A29190054F7EE /* MatchCandidateViewController.swift in Sources */,
 				A13B5DC91E0A267D0054F7EE /* LoginViewController.swift in Sources */,
 				A13B5DCF1E0A28F80054F7EE /* MatchedProfilesViewController.swift in Sources */,
+				A13B5DD91E0A5EFD0054F7EE /* Extensions.swift in Sources */,
 				A13B5DCD1E0A28C20054F7EE /* SignUpProfileViewController.swift in Sources */,
 				A13B5DD31E0A29300054F7EE /* CandidateDetailViewController.swift in Sources */,
 				A13B5DD71E0A358B0054F7EE /* MatchedProfileTableViewCell.swift in Sources */,

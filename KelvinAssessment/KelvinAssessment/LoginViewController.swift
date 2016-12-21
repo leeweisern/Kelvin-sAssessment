@@ -39,14 +39,14 @@ class LoginViewController: UIViewController {
     }()
     
     func handleLoginUser() {
-//        if emailTextField.text != nil && passwordTextField.text != nil {
-//            loginUser(email: emailTextField.text!, password: passwordTextField.text!)
-//        } else {
-//            let fieldEmptyAlert = UIAlertController.init(title: "Empty Field", message: "Your email or password field is empty, please try again.", preferredStyle: .alert)
-//            let okAlertAction = UIAlertAction.init(title: "OK", style: .default, handler: nil)
-//            fieldEmptyAlert.addAction(okAlertAction)
-//            self.present(fieldEmptyAlert, animated: true, completion: nil)
-//        }
+        if emailTextField.text != nil && passwordTextField.text != nil {
+            loginUser(email: emailTextField.text!, password: passwordTextField.text!)
+        } else {
+            let fieldEmptyAlert = UIAlertController.init(title: "Empty Field", message: "Your email or password field is empty, please try again.", preferredStyle: .alert)
+            let okAlertAction = UIAlertAction.init(title: "OK", style: .default, handler: nil)
+            fieldEmptyAlert.addAction(okAlertAction)
+            self.present(fieldEmptyAlert, animated: true, completion: nil)
+        }
     }
     
     
@@ -62,13 +62,17 @@ class LoginViewController: UIViewController {
     }()
     
     func handleSignUpUser() {
-        
+        let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.init(identifier: "Main"))
+        let signUpProfileViewController = storyboard.instantiateViewController(withIdentifier: "SignUpProfileViewController")
+        let navController = UINavigationController(rootViewController: signUpProfileViewController)
+        self.present(navController, animated: true, completion: nil)
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = UIColor.white
         self.view.addSubview(emailTextField)
         self.view.addSubview(passwordTextField)
         self.view.addSubview(loginButton)
@@ -111,6 +115,7 @@ class LoginViewController: UIViewController {
         signUpButton.widthAnchor.constraint(equalToConstant: 300).isActive = true
     }
 
+    
     
 }
 
