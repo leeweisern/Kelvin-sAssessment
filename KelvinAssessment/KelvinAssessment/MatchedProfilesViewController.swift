@@ -58,8 +58,7 @@ class MatchedProfilesViewController: UIViewController {
 }
 
 
-extension MatchedProfilesViewController: UITableViewDataSource
-{
+extension MatchedProfilesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
         return 1
@@ -73,8 +72,7 @@ extension MatchedProfilesViewController: UITableViewDataSource
     }
 }
 
-extension MatchedProfilesViewController: UITableViewDelegate
-{
+extension MatchedProfilesViewController: UITableViewDelegate {
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        i = indexPath.row
 //        self.moveToNextViewController()

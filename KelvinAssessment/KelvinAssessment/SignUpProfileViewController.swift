@@ -42,6 +42,7 @@ class SignUpProfileViewController: UIViewController {
                                 "email": self.emailTextField.text!,
                                 "password": self.passwordTextField.text!,
                                 "description": self.descriptionTextField.text!,
+                                "matchedUsers": [String](),
                                 "profileImage": "default"] as [String : Any]
                     
                 self.loginUser(email: self.emailTextField.text!, password: self.passwordTextField.text!)
